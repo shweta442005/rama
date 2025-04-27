@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>home page</h1>
+    <div>
+        <nav>
+            {% if is.authenticated %}
+            <ul>
+                <li><a href="{% url'apply_leave'}">apply_leave</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="{% url 'leave_status'}">leave_status</a></li>
+            </ul>
+            <ul>
+                <li><a href="{% url 'logout' %}">logout</a></li>
+            </ul>
+            {% else %}
+            <ul>
+                <li><a href="{% url 'login' %}">login</a></li>
+            </ul>
+            <ul>
+                <li><a href="{% url 'register' %}">register</a></li>
+            </ul>
+            {% endif %}
+        </nav>
+    </div>
+    {% 
+    {% block content %}
+    <h1>welcome to leave managemant application</h1>
+    <p>here you can mange your applications<br>
+    and you can see you balance leaves.<br>
+Thank you......
+</p>
+        {% endblock content%}
+        }
+</body>
+</html>
