@@ -1,0 +1,10 @@
+<h1>
+    Todo List
+</h1>
+{% for i in todos %}
+<ul>
+    <li>{{i.title}}</li>
+    <li>{{i.completed}}</li>
+    <li>{{i.created_at}}</li>
+</ul>
+{% endfor %}
